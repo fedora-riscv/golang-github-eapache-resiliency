@@ -7,6 +7,11 @@ Version:                1.1.0
 
 %gometa
 
+# Remove in F33:
+%global godevelheader %{expand:
+Obsoletes:      golang-github-eapache-go-resiliency-devel < 1.1.0-3
+}
+
 %global common_description %{expand:
 Resiliency patterns for golang.}
 
@@ -16,7 +21,7 @@ Resiliency patterns for golang.}
 %global gosupfiles glide.lock glide.yaml
 
 Name:           %{goname}
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Resiliency patterns for golang
 
 License:        MIT
@@ -45,6 +50,9 @@ cp %{S:1} %{S:2} .
 %gopkgfiles
 
 %changelog
+* Fri Jul 05 2019 Elliott Sales de Andrade <quantum.analyst@gmail.com> - 1.1.0-4
+- Add Obsoletes for old name
+
 * Tue Apr 23 18:41:48 CEST 2019 Robert-André Mauchin <zebob.m@gmail.com> - 1.1.0-3
 - Update to new macros
 
