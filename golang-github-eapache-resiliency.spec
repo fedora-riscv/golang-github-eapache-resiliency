@@ -21,7 +21,7 @@ Resiliency patterns for golang.}
 %global gosupfiles glide.lock glide.yaml
 
 Name:           %{goname}
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Resiliency patterns for golang
 
 License:        MIT
@@ -50,6 +50,9 @@ cp %{S:1} %{S:2} .
 %gopkgfiles
 
 %changelog
+* Wed Jan 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 1.1.0-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
 * Thu Jul 25 2019 Fedora Release Engineering <releng@fedoraproject.org> - 1.1.0-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
